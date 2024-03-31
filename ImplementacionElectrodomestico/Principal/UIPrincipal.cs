@@ -22,9 +22,19 @@ namespace ImplementacionElectrodomestico.Principal
 
             Console.Write("\tElija una opción: ");
 
+        }
 
+        public static void MenuColor()
+        {
+            Console.Clear();
 
+            Console.WriteLine("\t- Menú Colores -");
+            Console.WriteLine("0 - Azul.\n");
+            Console.WriteLine("1 - Rojo.\n");
+            Console.WriteLine("2 - Negro.\n");
+            Console.WriteLine("3 - Blanco.\n");
 
+            Console.Write("\tElija una opción: ");
         }
 
     }

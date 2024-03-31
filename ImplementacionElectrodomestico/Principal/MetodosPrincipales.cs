@@ -74,7 +74,22 @@ namespace ImplementacionElectrodomestico.Principal
             return cadena;
         }
 
-        public static double CaptarNum(string Text)
+        public static char CaptarCaracter(string Text)
+        {
+            string aux = "";
+            char caracter = '-';
+
+            Console.Write($"Escriba {Text}: ");
+
+            aux = Console.ReadLine();
+
+            caracter = Convert.ToChar(aux);
+
+            return caracter;
+        }
+
+
+        public static double CaptarNumDouble(string Text)
         {
             string aux = "";
             double num = 0;
@@ -100,6 +115,31 @@ namespace ImplementacionElectrodomestico.Principal
             num = Convert.ToInt32(aux);
 
             return num;
+        }
+
+        public static Colores CaptarColores()
+        {
+            // Recursos
+
+            Colores color;
+            Colores opcion;
+
+            opcion = (Colores)MetodosPrincipales.CaptarOpcion((byte)Enum.GetValues<Colores>().Length);
+
+            switch (opcion)
+            {
+                case Colores.Azul:
+                    break;
+                case Colores.Rojo:
+                    break;
+                case Colores.Nego:
+                    break;
+                case Colores.Blanco:
+                    break;
+            }
+
+        
+
         }
 
 

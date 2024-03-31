@@ -20,16 +20,20 @@ namespace ImplementacionElectrodomestico.Agregar
             string modelo;
             double precio;
             double peso;
-            int stock = 0;
-            char consumo = 'a';
+            int stock;
+            char consumo;
             Colores color = Colores.Blanco; 
-            double carga = 0;
+            double carga;
 
 
             marca = MetodosPrincipales.CaptarCadena("la Marca");
             modelo = MetodosPrincipales.CaptarCadena("el Modelo");
-            precio = MetodosPrincipales.CaptarNum("el precio");
-            peso = MetodosPrincipales.CaptarNum("el peso");
+            precio = MetodosPrincipales.CaptarNumDouble("el precio");
+            peso = MetodosPrincipales.CaptarNumDouble("el peso");
+            stock = MetodosPrincipales.CaptarNumInt("el stock");
+            consumo = MetodosPrincipales.CaptarCaracter("el consumo");
+            carga = MetodosPrincipales.CaptarNumDouble("la carga");
+
 
 
             ListaE.Add(new Lavadora(precio, peso, marca, modelo, stock, consumo, color, carga));
@@ -50,8 +54,8 @@ namespace ImplementacionElectrodomestico.Agregar
 
             marca = MetodosPrincipales.CaptarCadena("la Marca");
             modelo = MetodosPrincipales.CaptarCadena("el Modelo");
-            precio = MetodosPrincipales.CaptarNum("el precio");
-            peso = MetodosPrincipales.CaptarNum("el peso");
+            precio = MetodosPrincipales.CaptarNumDouble("el precio");
+            peso = MetodosPrincipales.CaptarNumDouble("el peso");
 
 
             ListaE.Add(new Television(marca, modelo, precio, peso));
