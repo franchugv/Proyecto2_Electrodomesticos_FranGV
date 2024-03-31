@@ -25,12 +25,12 @@ namespace Proyecto2_Electrodomesticos_FranGV
             _carga = CARGA_DEF;
         }
 
-        public Lavadora(string marca, string modelo, double precio, double peso) : base(precio, peso, marca, modelo) 
+        public Lavadora(string marca, string modelo, double precio, double peso) : base(marca, modelo, precio, peso) 
         {
             _carga = CARGA_DEF;
         }
 
-        public Lavadora(double precio, double peso, string marca, string modelo, int stock, char consumo, Colores color, double carga) : base(precio, peso, marca, modelo, 
+        public Lavadora(string marca, string modelo, double precio, double peso, int stock, char consumo, Colores color, double carga) : base(marca, modelo, precio, peso,
             stock, consumo, color)
         {
             Carga = carga;
@@ -55,6 +55,7 @@ namespace Proyecto2_Electrodomesticos_FranGV
         // MÉTODOS
         private void ValidarCarga(double carga)
         {
+            if (carga < 0) throw new MinimoException();
             if (carga > 45) throw new MaximoException();
         }
 

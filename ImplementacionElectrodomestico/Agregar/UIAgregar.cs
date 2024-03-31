@@ -15,10 +15,13 @@ namespace ImplementacionElectrodomestico.Agregar
         {
 
             Console.Clear();
-            Console.WriteLine("\t- Añadir Electrodomésticos -");
-            Console.WriteLine("0 - Lavadora.\n");
-            Console.WriteLine("1 - Televisión.\n");
-            Console.WriteLine("2 - Salir.\n");
+            Console.WriteLine("\n\t\t- Añadir Electrodomésticos -");
+            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine("\t0 - Salir.\n");
+            Console.WriteLine("\t1 - Lavadora.");
+            Console.WriteLine("\t2 - Televisión.\n");
+
+
 
             Console.Write("\tElija una opción: ");
         }

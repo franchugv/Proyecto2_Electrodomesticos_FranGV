@@ -13,12 +13,13 @@ namespace ImplementacionElectrodomestico.Principal
         {
             Console.Clear();
 
-            Console.WriteLine("\t- Menú principal -");
-            Console.WriteLine("0 - Agregar Electrodomestico.\n");
-            Console.WriteLine("1 - Eliminar Electrodomestico.\n");
-            Console.WriteLine("2 - Consultar Electrodomesticos.\n");
-            Console.WriteLine("3 - Modificar Electrodomesticos.\n");
-            Console.WriteLine("4 - Salir.\n");
+            Console.WriteLine("\n\t\t- Menú principal -");
+            Console.WriteLine("-------------------------------------------------------------------");
+            Console.WriteLine("\t0 - Salir.\n");
+            Console.WriteLine("\t1 - Agregar Electrodomésticos.");
+            Console.WriteLine("\t2 - Eliminar Electrodomésticos.");
+            Console.WriteLine("\t3 - Consultar Electrodomésticos.");
+            Console.WriteLine("\t4 - Modificar Electrodomésticos.");
 
             Console.Write("\tElija una opción: ");
 
@@ -28,11 +29,24 @@ namespace ImplementacionElectrodomestico.Principal
         {
             Console.Clear();
 
-            Console.WriteLine("\t- Menú Colores -");
-            Console.WriteLine("0 - Azul.\n");
-            Console.WriteLine("1 - Rojo.\n");
-            Console.WriteLine("2 - Negro.\n");
-            Console.WriteLine("3 - Blanco.\n");
+            Console.WriteLine("\t\t- Menú Colores -");
+
+            Console.WriteLine("\t0 - Blanco.");
+            Console.WriteLine("\t1 - Negro.");
+            Console.WriteLine("\t2 - Azul.");
+            Console.WriteLine("\t3 - Rojo.");
+            Console.WriteLine("\t4 - Gris.");
+
+            Console.Write("\tElija una opción: ");
+        }
+
+        public static void MenuBool() 
+        {
+            Console.Clear();
+
+            Console.WriteLine("\t\t- Menú TDT -");
+            Console.WriteLine("\t0 - SI.");
+            Console.WriteLine("\t1 - No.\n");
 
             Console.Write("\tElija una opción: ");
         }

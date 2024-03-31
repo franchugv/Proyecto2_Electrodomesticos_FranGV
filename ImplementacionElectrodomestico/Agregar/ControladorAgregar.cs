@@ -27,25 +27,24 @@ namespace ImplementacionElectrodomestico.Agregar
                 UIAgregar.MenuAgregar();
                 // RESET
 
-                esValido = true;
 
-                opcion = (MenuAgregar)MetodosPrincipales.CaptarOpcion((byte)Enum.GetValues<MenuAgregar>().Length);
+                opcion = (MenuAgregar)MetodosPrincipales.CaptarOpcionEnum((byte)Enum.GetValues<MenuAgregar>().Length);
 
                 switch (opcion)
                 {
+                    case MenuAgregar.Salir:
+                        break;
                     case MenuAgregar.Lavadora:
                         MetodosAgregar.AgregarLavadora(ListaE);
                         break;
                     case MenuAgregar.Television:
                         MetodosAgregar.AgregarTelevision(ListaE);
                         break;
-                    case MenuAgregar.Salir:
-                        break;
+
                 }
 
-            } while (!esValido || opcion != MenuAgregar.Salir);
+            } while (opcion != MenuAgregar.Salir);
 
-            UIAgregar.MenuAgregar();
 
 
 

@@ -7,9 +7,14 @@ using System.Threading.Tasks;
 
 namespace ImplementacionElectrodomestico.Principal
 {
-    public enum MenuPrincipal : byte { Agregar, Eliminar, Consultar, Modificar, Salir }
+    #region Enum
+    public enum MenuPrincipal : byte { Salir ,Agregar, Eliminar, Consultar, Modificar }
 
-    public enum MenuAgregar : byte { Lavadora, Television, Salir }
+    public enum MenuAgregar : byte { Salir, Lavadora, Television  }
+
+    public enum MenuBool : byte { Si, No }
+
+    #endregion
 
     public static class MetodosPrincipales
     {
@@ -22,7 +27,23 @@ namespace ImplementacionElectrodomestico.Principal
             Console.ReadLine();
         }
 
-        public static byte CaptarOpcion(byte NumElementos)
+
+        public static void MostrarNumLista(List <Electrodomestico> ListaE)
+        {
+            Console.WriteLine($"Nº de Electrodomésticos: ({ListaE.ToArray().Length})\n");
+        }
+
+        public static void Pausa()
+        {
+            Console.Write("\nPulse Enter para continuar...");
+            Console.ReadLine();
+            Console.Clear();    
+        }
+
+
+        #region Captar Datos
+
+        public static byte CaptarOpcionEnum(byte NumElementos)
         {
             // El NumElementos debe ser el Length del Enum
             // RECURSOS
@@ -58,16 +79,11 @@ namespace ImplementacionElectrodomestico.Principal
 
         }
 
-        public static void MostrarNumLista(List <Electrodomestico> ListaE)
-        {
-            Console.WriteLine($"Nº de Electrodomésticos: ({ListaE.ToArray().Length}\n)");
-        }
-
         public static string CaptarCadena(string Text)
         {
             string cadena = "";
 
-            Console.Write($"Escriba {Text}: ");
+            Console.Write($"\nEscriba {Text}: ");
 
             cadena = Console.ReadLine();
 
@@ -79,7 +95,7 @@ namespace ImplementacionElectrodomestico.Principal
             string aux = "";
             char caracter = '-';
 
-            Console.Write($"Escriba {Text}: ");
+            Console.Write($"\nEscriba {Text}: ");
 
             aux = Console.ReadLine();
 
@@ -88,13 +104,12 @@ namespace ImplementacionElectrodomestico.Principal
             return caracter;
         }
 
-
         public static double CaptarNumDouble(string Text)
         {
             string aux = "";
             double num = 0;
 
-            Console.Write($"Escriba {Text}: ");
+            Console.Write($"\nEscriba {Text}: ");
 
             aux = Console.ReadLine();
 
@@ -108,7 +123,7 @@ namespace ImplementacionElectrodomestico.Principal
             string aux = "";
             int num = 0;
 
-            Console.Write($"Escriba {Text}: ");
+            Console.Write($"\nEscriba {Text}: ");
 
             aux = Console.ReadLine();
 
@@ -121,27 +136,90 @@ namespace ImplementacionElectrodomestico.Principal
         {
             // Recursos
 
-            Colores color;
+            Colores color = Colores.Blanco;
             Colores opcion;
 
-            opcion = (Colores)MetodosPrincipales.CaptarOpcion((byte)Enum.GetValues<Colores>().Length);
+            UIPrincipal.MenuColor();
+            opcion = (Colores)MetodosPrincipales.CaptarOpcionEnum((byte)Enum.GetValues<Colores>().Length);
 
             switch (opcion)
             {
+                case Colores.Blanco:
+                    color = Colores.Blanco;
+                    break;
+                case Colores.Negro:
+                    color = Colores.Negro;
+                    break;
                 case Colores.Azul:
+                    color = Colores.Azul;
                     break;
                 case Colores.Rojo:
+                    color = Colores.Rojo;
                     break;
-                case Colores.Nego:
+                case Colores.Gris:
+                    color = Colores.Gris;
                     break;
-                case Colores.Blanco:
-                    break;
+
+
             }
 
+            // SALIDA
+
+            return color;
         
 
         }
 
+        public static bool CaptarBool()
+        {
+            // RECURSOS
+
+            bool esCorrecto = true;
+            MenuBool opcion = MenuBool.Si;
+
+            UIPrincipal.MenuBool();
+
+            // CAPTAR OPCION
+            opcion = (MenuBool)MetodosPrincipales.CaptarOpcionEnum((byte)Enum.GetValues<MenuBool>().Length);
+
+            switch (opcion)
+            {
+                case MenuBool.Si:
+                    esCorrecto = true;
+                    break;
+                case MenuBool.No:
+                    esCorrecto = false;
+                    break;
+            }
+
+            return esCorrecto;
+
+        }
+
+        public static byte CaptarByteLista(List<Electrodomestico> ListaE)
+        {
+            // RECURSOS
+            byte opcion = 0;
+            string aux = "";
+
+            // ENTRADA
+            aux = Console.ReadLine();
+            // Validar que no sea cadena vacía
+            if (string.IsNullOrEmpty(aux)) throw new CadenaVaciaExpection();
+
+            // CONVERSIÓN
+            opcion = Convert.ToByte(aux);
+
+            // Validar que no sea mayor que la lista
+
+            if (opcion > ListaE.ToArray().Length) throw new MaximoException();
+
+            // SALIDA
+            return (byte)(opcion - 1);
+        }
+
+
+        #endregion
 
 
     }

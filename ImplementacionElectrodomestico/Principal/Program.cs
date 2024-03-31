@@ -1,4 +1,5 @@
 ﻿using ImplementacionElectrodomestico.Agregar;
+using ImplementacionElectrodomestico.Consultar;
 using Proyecto2_Electrodomesticos_FranGV;
 
 namespace ImplementacionElectrodomestico.Principal
@@ -10,7 +11,6 @@ namespace ImplementacionElectrodomestico.Principal
             // RECURSOS
 
             List<Electrodomestico> ListaElectrodomesticos = new List<Electrodomestico>();
-
             MenuPrincipal opcion = MenuPrincipal.Salir;
             bool esValido;
             string MensajeError = "";
@@ -29,14 +29,14 @@ namespace ImplementacionElectrodomestico.Principal
 
                 try
                 {
-                    opcion = (MenuPrincipal)MetodosPrincipales.CaptarOpcion((byte)Enum.GetValues<MenuPrincipal>().Length);
-
-
-                    esValido = true;
+                    opcion = (MenuPrincipal)MetodosPrincipales.CaptarOpcionEnum((byte)Enum.GetValues<MenuPrincipal>().Length);
 
 
                     switch (opcion)
                     {
+                        case MenuPrincipal.Salir:
+
+                            break;
                         case MenuPrincipal.Agregar:
                             ControladorAgregar.ControladorA(ListaElectrodomesticos);
 
@@ -46,15 +46,12 @@ namespace ImplementacionElectrodomestico.Principal
 
                             break;
                         case MenuPrincipal.Consultar:
+                            ControladorConsultar.ControladorConsultas(ListaElectrodomesticos);
 
                             break;
                         case MenuPrincipal.Modificar:
 
                             break;
-                        case MenuPrincipal.Salir:
-
-                            break;
-
                     }
                 }
 

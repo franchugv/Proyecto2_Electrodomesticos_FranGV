@@ -30,13 +30,13 @@ namespace Proyecto2_Electrodomesticos_FranGV
             _tdt = TDT_DEF;
         }
 
-        public Television(string marca, string modelo, double precio, double peso) : base(precio, peso, marca, modelo) 
+        public Television(string marca, string modelo, double precio, double peso) : base(marca, modelo, precio, peso) 
         {
             _resolucion = RESOLUCION_DEF;
             _tdt = TDT_DEF;
         }
 
-        public Television(double precio, double peso, string marca, string modelo, int stock, char consumo, Colores color, int res, bool tdt) : base(precio, peso, marca, modelo,
+        public Television(string marca, string modelo, double precio, double peso, int stock, char consumo, Colores color, int res, bool tdt) : base(marca, modelo, precio, peso,
             stock, consumo, color)
         {
             Resolucion = res;

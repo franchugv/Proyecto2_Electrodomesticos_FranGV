@@ -1,6 +1,6 @@
 ﻿namespace Proyecto2_Electrodomesticos_FranGV
 {
-    public enum Colores : byte { Blanco, Nego, Rojo, Azul, Gris }
+    public enum Colores : byte { Blanco, Negro, Rojo, Azul, Gris }
 
     public class Electrodomestico
     {
@@ -43,13 +43,13 @@
             _color = COLOR_DEF;
         }
 
-        public Electrodomestico(double precio, double peso, string marca, string modelo) :this(marca, modelo)
+        public Electrodomestico(string marca, string modelo ,double precio, double peso) :this(marca, modelo)
         {
             PrecioBase = precio;
             Peso = peso;    
         }
 
-        public Electrodomestico(double precio, double peso, string marca, string modelo, int stock, char consumo, Colores color) :this(precio, peso, marca, modelo) 
+        public Electrodomestico(string marca, string modelo, double precio, double peso, int stock, char consumo, Colores color) :this(marca, modelo, precio, peso) 
         {
             Stock = stock;
             ConsumoEnergetico = consumo;
