@@ -15,39 +15,58 @@ namespace ImplementacionElectrodomestico.Modificar
             // RECURSOS
             bool esCorrecto;
 
-            Console.WriteLine("\n¿Desea Modificar la Marca?\n");
-            esCorrecto = MetodosPrincipales.CaptarBool();
+            esCorrecto = Eleccion("¿Desea Modificar la Marca?");
+            if (esCorrecto)
+            {
+                ListaE[opciones].Marca = MetodosPrincipales.CaptarCadena("la nueva Marca");
+            }
 
+            esCorrecto = Eleccion("¿Desea Modificar el Modelo?");
             if (esCorrecto)
             {
-                ListaE[opciones].Marca = MetodosPrincipales.CaptarCadena("Escriba la nueva Marca: ");
+                ListaE[opciones].Modelo = MetodosPrincipales.CaptarCadena("el nuevo Modelo");
             }
+
+            esCorrecto = Eleccion("¿Desea Modificar el Precio?");
             if (esCorrecto)
             {
-                ListaE[opciones].Modelo = MetodosPrincipales.CaptarCadena("Escriba el nuevo Modelo: ");
+                ListaE[opciones].PrecioBase = MetodosPrincipales.CaptarNumDouble("el nuevo Precio");
             }
+
+            esCorrecto = Eleccion("¿Desea Modificar el peso?");
             if (esCorrecto)
             {
-                ListaE[opciones].PrecioBase = MetodosPrincipales.CaptarNumDouble("Escriba el nuevo Precio: ");
+                ListaE[opciones].Peso = MetodosPrincipales.CaptarNumDouble("el nuevo Peso");
             }
+
+            esCorrecto = Eleccion("¿Desea incrementar el Stock?");
             if (esCorrecto)
             {
-                ListaE[opciones].Peso = MetodosPrincipales.CaptarNumDouble("Escriba el nuevo Peso: ");
+                ListaE[opciones].Comprar(MetodosPrincipales.CaptarNumInt("el Incremento del Stock"));
             }
+
+            esCorrecto = Eleccion("¿Desea decrementar el Stock?");
             if (esCorrecto)
             {
-                ListaE[opciones].Comprar(MetodosPrincipales.CaptarNumInt("Incrementar el Stock: "));
+                ListaE[opciones].Vender(MetodosPrincipales.CaptarNumInt("el Decremento del Stock: "));
             }
-            if (esCorrecto)
-            {
-                ListaE[opciones].Vender(MetodosPrincipales.CaptarNumInt("Decrementar el Stock: "));
-            }
+
+            esCorrecto = Eleccion("¿Desea Modificar el Color?");
             if (esCorrecto)
             {
                 ListaE[opciones].Color = MetodosPrincipales.CaptarColores();
             }
 
 
+        }
+
+        private static bool Eleccion(string text)
+        {
+            bool esCorrecto;
+            Console.Clear();
+            Console.WriteLine($"\n{text}\n");
+            esCorrecto = MetodosPrincipales.CaptarBool();
+            return esCorrecto;
         }
     }
 }

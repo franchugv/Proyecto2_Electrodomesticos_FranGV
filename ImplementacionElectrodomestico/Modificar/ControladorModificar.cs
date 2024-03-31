@@ -19,7 +19,7 @@ namespace ImplementacionElectrodomestico.Modificar
 
             opcion = MetodosPrincipales.CaptarByteLista(ListaE);
 
-
+            MetodosModificar.ModificarDatos(ListaE, opcion);
         }
     }
 }

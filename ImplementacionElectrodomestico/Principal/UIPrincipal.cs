@@ -43,6 +43,7 @@ namespace ImplementacionElectrodomestico.Principal
         public static void MenuBool() 
         {
 
+
             Console.WriteLine("\t\t- Menú Elección -");
             Console.WriteLine("\t0 - SI.");
             Console.WriteLine("\t1 - No.\n");

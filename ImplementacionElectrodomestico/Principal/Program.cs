@@ -1,6 +1,7 @@
 ﻿using ImplementacionElectrodomestico.Agregar;
 using ImplementacionElectrodomestico.Consultar;
 using ImplementacionElectrodomestico.Eliminar;
+using ImplementacionElectrodomestico.Modificar;
 using Proyecto2_Electrodomesticos_FranGV;
 
 namespace ImplementacionElectrodomestico.Principal
@@ -51,7 +52,7 @@ namespace ImplementacionElectrodomestico.Principal
 
                             break;
                         case MenuPrincipal.Modificar:
-
+                            ControladorModificar.ControladorModificarElectrodomestico(ListaElectrodomesticos);
                             break;
                     }
                 }
