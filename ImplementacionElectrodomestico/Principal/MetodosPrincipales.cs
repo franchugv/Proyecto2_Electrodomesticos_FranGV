@@ -10,7 +10,7 @@ namespace ImplementacionElectrodomestico.Principal
     #region Enum
     public enum MenuPrincipal : byte { Salir ,Agregar, Eliminar, Consultar, Modificar }
 
-    public enum MenuAgregar : byte { Salir, Lavadora, Television  }
+    public enum MenuElectrodomesticos : byte { Salir, Lavadora, Television  }
 
     public enum MenuBool : byte { Si, No }
 

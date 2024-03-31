@@ -18,7 +18,7 @@ namespace ImplementacionElectrodomestico.Agregar
             // RECURSOS
 
             bool esValido;
-            MenuAgregar opcion = MenuAgregar.Salir;
+            MenuElectrodomesticos opcion = MenuElectrodomesticos.Salir;
 
             // Menu
 
@@ -28,22 +28,22 @@ namespace ImplementacionElectrodomestico.Agregar
                 // RESET
 
 
-                opcion = (MenuAgregar)MetodosPrincipales.CaptarOpcionEnum((byte)Enum.GetValues<MenuAgregar>().Length);
+                opcion = (MenuElectrodomesticos)MetodosPrincipales.CaptarOpcionEnum((byte)Enum.GetValues<MenuElectrodomesticos>().Length);
 
                 switch (opcion)
                 {
-                    case MenuAgregar.Salir:
+                    case MenuElectrodomesticos.Salir:
                         break;
-                    case MenuAgregar.Lavadora:
+                    case MenuElectrodomesticos.Lavadora:
                         MetodosAgregar.AgregarLavadora(ListaE);
                         break;
-                    case MenuAgregar.Television:
+                    case MenuElectrodomesticos.Television:
                         MetodosAgregar.AgregarTelevision(ListaE);
                         break;
 
                 }
 
-            } while (opcion != MenuAgregar.Salir);
+            } while (opcion != MenuElectrodomesticos.Salir);
 
 
 

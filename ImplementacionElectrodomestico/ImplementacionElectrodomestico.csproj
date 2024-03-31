@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Proyecto2_Electrodomesticos_FranGV\Proyecto2_Electrodomesticos_FranGV.csproj" />
+    <Compile Remove="Principal\NewFolder\**" />
+    <EmbeddedResource Remove="Principal\NewFolder\**" />
+    <None Remove="Principal\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Principal\NewFolder\" />
+    <ProjectReference Include="..\Proyecto2_Electrodomesticos_FranGV\Proyecto2_Electrodomesticos_FranGV.csproj" />
   </ItemGroup>
 
 </Project>

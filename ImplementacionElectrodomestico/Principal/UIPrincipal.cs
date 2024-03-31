@@ -42,9 +42,8 @@ namespace ImplementacionElectrodomestico.Principal
 
         public static void MenuBool() 
         {
-            Console.Clear();
 
-            Console.WriteLine("\t\t- Menú TDT -");
+            Console.WriteLine("\t\t- Menú Elección -");
             Console.WriteLine("\t0 - SI.");
             Console.WriteLine("\t1 - No.\n");
 
