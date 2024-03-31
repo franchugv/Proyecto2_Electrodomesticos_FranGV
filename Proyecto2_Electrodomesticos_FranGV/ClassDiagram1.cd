@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Proyecto2_Electrodomesticos_FranGV.Electrodomestico">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAAABAEAABKQBFFAAAgAAABgAAABAABEhiAgAEAAlA=</HashCode>
+      <FileName>Electrodomestico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto2_Electrodomesticos_FranGV.FormatoIncorrectoException" Collapsed="true">
+    <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Electrodomestico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto2_Electrodomesticos_FranGV.CadenaVaciaExpection" Collapsed="true">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Electrodomestico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto2_Electrodomesticos_FranGV.MaximoException" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Electrodomestico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto2_Electrodomesticos_FranGV.MinimoException" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Electrodomestico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto2_Electrodomesticos_FranGV.Lavadora">
+    <Position X="3.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAABAAAgAAAAEAAAAAAAAAAAAAAABAACAAAAACAA=</HashCode>
+      <FileName>Lavadora.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proyecto2_Electrodomesticos_FranGV.Television">
+    <Position X="1.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAEAAAEAAIAAAAAQAABAgCAABCAAAA=</HashCode>
+      <FileName>Television.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Proyecto2_Electrodomesticos_FranGV.Colores" Collapsed="true">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEBAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Electrodomestico.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
