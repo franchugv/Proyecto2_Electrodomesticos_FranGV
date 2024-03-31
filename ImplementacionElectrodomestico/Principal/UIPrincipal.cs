@@ -11,12 +11,14 @@ namespace ImplementacionElectrodomestico.Principal
 
         public static void MenuPrincipal()
         {
+            Console.Clear();
+
             Console.WriteLine("\t- Menú principal -");
-            Console.WriteLine("1 - Agregar Electrodomestico.\n");
-            Console.WriteLine("2 - Eliminar Electrodomestico.\n");
-            Console.WriteLine("3 - Consultar Electrodomesticos.\n");
-            Console.WriteLine("4 - Modificar Electrodomesticos.\n");
-            Console.WriteLine("5 - Salir.\n");
+            Console.WriteLine("0 - Agregar Electrodomestico.\n");
+            Console.WriteLine("1 - Eliminar Electrodomestico.\n");
+            Console.WriteLine("2 - Consultar Electrodomesticos.\n");
+            Console.WriteLine("3 - Modificar Electrodomesticos.\n");
+            Console.WriteLine("4 - Salir.\n");
 
             Console.Write("\tElija una opción: ");
 
