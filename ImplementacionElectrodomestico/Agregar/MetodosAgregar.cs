@@ -49,8 +49,8 @@ namespace ImplementacionElectrodomestico.Agregar
             char consumo;
             Colores color;
             double carga;
-            int resolucion = 0;
-            bool tdt = true;
+            int resolucion;
+            bool tdt;
 
             CaptarDatosTV(out marca, out modelo, out precio, out peso, out stock, out consumo, out color, out resolucion, out tdt);
 
@@ -65,7 +65,7 @@ namespace ImplementacionElectrodomestico.Agregar
             precio = MetodosPrincipales.CaptarNumDouble("el precio");
             peso = MetodosPrincipales.CaptarNumDouble("el peso");
             stock = MetodosPrincipales.CaptarNumInt("el stock");
-            consumo = MetodosPrincipales.CaptarCaracter("el consumo");
+            consumo = MetodosPrincipales.CaptarCaracter("el consumo (A-F)");
             carga = MetodosPrincipales.CaptarNumDouble("la carga");
             color = MetodosPrincipales.CaptarColores();
         }
@@ -77,7 +77,7 @@ namespace ImplementacionElectrodomestico.Agregar
             precio = MetodosPrincipales.CaptarNumDouble("el precio");
             peso = MetodosPrincipales.CaptarNumDouble("el peso");
             stock = MetodosPrincipales.CaptarNumInt("el stock");
-            consumo = MetodosPrincipales.CaptarCaracter("el consumo (A-W)");
+            consumo = MetodosPrincipales.CaptarCaracter("el consumo (A-F)");
             color = MetodosPrincipales.CaptarColores();
 
             res = MetodosPrincipales.CaptarNumInt("la resolución");

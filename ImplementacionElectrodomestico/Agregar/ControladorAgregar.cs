@@ -17,6 +17,7 @@ namespace ImplementacionElectrodomestico.Agregar
 
             // RECURSOS
 
+            string mError = "";
             bool esValido;
             MenuElectrodomesticos opcion = MenuElectrodomesticos.Salir;
 
@@ -24,26 +25,43 @@ namespace ImplementacionElectrodomestico.Agregar
 
             do
             {
+                esValido = true;
+                try
+                {
+
+                
                 UIAgregar.MenuAgregar();
                 // RESET
 
 
                 opcion = (MenuElectrodomesticos)MetodosPrincipales.CaptarOpcionEnum((byte)Enum.GetValues<MenuElectrodomesticos>().Length);
 
-                switch (opcion)
-                {
-                    case MenuElectrodomesticos.Salir:
-                        break;
-                    case MenuElectrodomesticos.Lavadora:
-                        MetodosAgregar.AgregarLavadora(ListaE);
-                        break;
-                    case MenuElectrodomesticos.Television:
-                        MetodosAgregar.AgregarTelevision(ListaE);
-                        break;
+                    switch (opcion)
+                    {
+                        case MenuElectrodomesticos.Salir:
+                           
+                            break;
+                        case MenuElectrodomesticos.Lavadora:
+                            MetodosAgregar.AgregarLavadora(ListaE);
+                            break;
+                        case MenuElectrodomesticos.Television:
+                            MetodosAgregar.AgregarTelevision(ListaE);
+                            break;
+
+                    }
 
                 }
+                catch(Exception Error)
+                {
+                    esValido = false;
+                    mError = Error.Message;
+                }
+                finally
+                {
+                    if (!esValido) MetodosPrincipales.MostrarError(mError);
+                }
 
-            } while (opcion != MenuElectrodomesticos.Salir);
+            } while (opcion != MenuElectrodomesticos.Salir || !esValido);
 
 
 

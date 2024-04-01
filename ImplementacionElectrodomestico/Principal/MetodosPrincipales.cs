@@ -14,6 +14,8 @@ namespace ImplementacionElectrodomestico.Principal
 
     public enum MenuBool : byte { Si, No }
 
+    public enum Propiedades : byte { Salir, Marca, Modelo, Precio, Color, Consumo, Peso, IcrementoStock, DecrementoStock, Carga, Resolucion, TDT }
+
     #endregion
 
     public static class MetodosPrincipales

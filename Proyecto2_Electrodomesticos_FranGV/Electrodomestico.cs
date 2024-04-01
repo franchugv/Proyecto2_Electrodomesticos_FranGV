@@ -197,6 +197,10 @@
 
         private static char ValidarCaracterConsumo(char caracter)
         {
+
+            const string RANGO_CONSUMO = "ABCDEF";
+
+
             // PREPARACIÓN A MAYUSCULAS
 
             caracter = char.ToUpper(caracter);
@@ -204,12 +208,12 @@
             // VALIDACIÓN
 
             // Validar que solo sea letras
-            if (!char.IsLetter(caracter)) throw new FormatoIncorrectoException();
+            if (!RANGO_CONSUMO.Contains(caracter)) throw new FormatoIncorrectoException();
 
             // Validar que no sea cadena vacía
             if (string.IsNullOrEmpty(caracter.ToString())) throw new CadenaVaciaExpection();
 
-            // Devolver caracter mayusculas
+            // Devolver carácter mayúsculas
             return caracter;
         }
 
@@ -250,6 +254,7 @@
             cadena = $"Marca: {Marca}\n";
             cadena += $"Modelo: {Modelo}\n";
             cadena += $"Precio Base: {PrecioBase}\n";
+            cadena += $"Precio Final: {PrecioFinal}\n";
             cadena += $"Peso: {Peso}\n";
             cadena += $"Stock: {Stock}\n";
             cadena += $"Consumo Energético: {ConsumoEnergetico}\n";

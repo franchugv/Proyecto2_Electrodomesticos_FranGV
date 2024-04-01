@@ -30,7 +30,7 @@ namespace ImplementacionElectrodomestico.Principal
             Console.Clear();
 
             Console.WriteLine("\t\t- Menú Colores -");
-
+            Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("\t0 - Blanco.");
             Console.WriteLine("\t1 - Negro.");
             Console.WriteLine("\t2 - Azul.");
@@ -44,11 +44,12 @@ namespace ImplementacionElectrodomestico.Principal
         {
 
 
-            Console.WriteLine("\t\t- Menú Elección -");
+            Console.WriteLine("\n\t\t- Menú TDT -");
+            Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("\t0 - SI.");
             Console.WriteLine("\t1 - No.\n");
 
-            Console.Write("\tElija una opción: ");
+            Console.Write("\t¿Quiere TDT?: ");
         }
 
     }
