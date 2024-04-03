@@ -44,12 +44,17 @@ namespace ImplementacionElectrodomestico.Principal
         {
 
 
-            Console.WriteLine("\n\t\t- Menú TDT -");
+
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("\t0 - SI.");
             Console.WriteLine("\t1 - No.\n");
 
-            Console.Write("\t¿Quiere TDT?: ");
+            Console.Write("\t¿Elija una opción?: ");
+        }
+
+        public static void SolicitudTdt()
+        {
+            Console.WriteLine("¿Desea un TDT?");
         }
 
     }

@@ -68,25 +68,23 @@ namespace ImplementacionElectrodomestico.Modificar
                         ListaE[NumElecrodomestico].Vender(MetodosPrincipales.CaptarNumInt("el Decremento del Stock: "));
                         break;
                     case Propiedades.Carga: 
-                        if (ListaE is Lavadora)
-                        {
-                            Lavadora LavadoraX = (Lavadora)ListaE[NumElecrodomestico];
-                            LavadoraX.Carga = MetodosPrincipales.CaptarNumDouble("la Caga");
-                        }
+                        
+                            Lavadora Lavadoracarga = (Lavadora)ListaE[NumElecrodomestico];
+                            Lavadoracarga.Carga = MetodosPrincipales.CaptarNumDouble("la Carga");
+                        
                         break;
                     case Propiedades.Resolucion:
-                        if (ListaE is Television)
-                        {
-                            Television TelevisionX = (Television)ListaE[NumElecrodomestico];
-                            TelevisionX.Resolucion = MetodosPrincipales.CaptarNumInt("la Resolución");
-                        }
+                     
+                            Television Televisionres = (Television)ListaE[NumElecrodomestico];
+                            Televisionres.Resolucion = MetodosPrincipales.CaptarNumInt("la Resolución");
+                        
                         break;
                     case Propiedades.TDT:
-                        if (ListaE is Television)
-                        {
-                            Television TelevisionX = (Television)ListaE[NumElecrodomestico];
-                            TelevisionX.TDT = MetodosPrincipales.CaptarBool();
-                        }
+                        
+                            Television Televisiontdt = (Television)ListaE[NumElecrodomestico];
+                                UIPrincipal.SolicitudTdt();
+                            Televisiontdt.TDT = MetodosPrincipales.CaptarBool();
+                        
                         break;
                 }
                     }

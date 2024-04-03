@@ -81,6 +81,7 @@ namespace ImplementacionElectrodomestico.Agregar
             color = MetodosPrincipales.CaptarColores();
 
             res = MetodosPrincipales.CaptarNumInt("la resolución");
+            UIPrincipal.SolicitudTdt();
             tdt = MetodosPrincipales.CaptarBool();
 
         }
